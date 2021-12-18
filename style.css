@@ -32,6 +32,7 @@ header {
 /* NAV */
 
 header nav {
+    margin-top:20px ;
     display: flex;
     justify-content: space-between;
     
@@ -63,7 +64,7 @@ ul li a{
 
 .rrss li {
     list-style: none;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 
@@ -112,4 +113,66 @@ ul li a{
     font-size: .75rem;
     color: #97d8c45d;
     text-align: center;
+}
+
+/* About */
+
+.about-me{
+    width: 90%;
+    height: 1000px;
+    text-align: center;
+}
+
+.about-me h2{
+    color: var(--title-color);
+    margin: 50px;
+    margin-bottom: 100px;
+    font-size: 30px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.about-me img{
+    width: 40%;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.about-me p {
+    width: 40%;
+    font-size: .9rem;
+    text-align: center;
+    margin: auto 0;
+    margin-right: 20px;
+    color: var(--text-color);
+}
+
+.soft {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.soft i{
+    font-size: 120px;
+}
+
+.fa-html5 {
+    color: #E34F26;
+}
+.fa-css3-alt {
+    color: #264DE4;
+}
+.fa-js{
+    color: #F7DF1E;
+}
+.fa-react{
+    color: #00D8FF;
 }
