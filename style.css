@@ -75,7 +75,14 @@ ul li a{
 
 .main{
     width: 60%;
-    margin: 100px 0;
+    /* height: 100vh; */
+    margin-top: 100px;
+    margin-bottom: 100;
+    text-align: center;
+}
+
+.main .main-content{
+    text-align: left;
 }
 
 .main h2 {
@@ -91,7 +98,7 @@ ul li a{
     font-weight: 600;
 }
 .main p {
-    width: 40%;
+    width: 45%;
     text-align: center;
     margin: 0 auto;
     color: var(--text-color);
@@ -125,6 +132,7 @@ ul li a{
     width: 90%;
     height: 900px;
     text-align: center;
+    margin-top: 100px;
 }
 
 .about-me h2{
@@ -138,12 +146,19 @@ ul li a{
     display: flex;
     justify-content: space-between;
     margin-bottom: 150px;
+    margin-left: 55px;
+    margin-right: 55px;
 }
 
 .about-me img{
-    width: 40%;
+    width: auto;
     height: 300px;
     margin-left: 20px;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
 }
 
 .about-me p {
@@ -249,7 +264,7 @@ ul li a{
 .project-desc .links a {
     margin: 15px;
 
-    font-size: 30px;
+    font-size: 1.875rem;
     color: var(--title-color);
 }
 .project-desc a {
@@ -315,7 +330,7 @@ ul li a{
 }
 
 .contact-box .call2act p{
-    width: 60%;
+    width: 70%;
     text-align: left;
     color: var(--text-color);
 }
@@ -329,7 +344,7 @@ ul li a{
     background-color: transparent;
     border: 2.5px solid var(--border);
     padding: 5px 10px;
-    font-size: 25px;
+    font-size: 1.56rem;
     border-radius: 10px;
     color: var(--border);
     margin-right: 10px;
@@ -339,7 +354,7 @@ ul li a{
 .call2act .email-copy p {
     border: 2.5px solid var(--border);
     padding: 5px 10px;
-    font-size: 20px;
+    font-size: 1.2rem;
     border-radius: 10px;
     color: var(--border);
     margin-right: 10px;
@@ -363,7 +378,305 @@ ul li a{
     height: 40px;
 }
 
+form textarea{
+    width: 100%;
+    background-color: transparent;
+    border: 2.5px solid var(--border);
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    color: var(--border);
+    margin: 10px 0;
+    height: 80px;
+}
+
 form input[type='submit']{
    width: 30%;
    cursor: pointer;
+}
+
+/* =====
+MEDIA QUERIS
+=====
+*/
+
+/* Main */
+
+@media (max-width: 1280px) {
+    
+.main h2 {
+    
+    font-size: 25px;
+    
+}
+
+.main h1 {
+    font-size: 60px;
+
+}
+}
+
+@media (max-width: 1100px) {
+    
+.main h2 {
+    
+    font-size: 20px;
+    
+}
+
+.main h1 {
+    font-size: 50px;
+
+}
+
+.main p {
+    
+    font-size: 0.7rem;
+    /* text-align: left; */
+    
+}
+}
+
+@media (max-width: 920px) {
+    
+.main .main-content{
+    
+    text-align: center;
+    
+}
+
+
+}
+
+@media (max-width: 440px) {
+    .main {
+        margin-bottom: 120px;
+    }
+.main h1 {
+    font-size: 40px;
+    margin-bottom: 110px;
+
+}
+    
+.main p{
+    
+    display: none;
+    
+}
+}
+
+/* About */
+
+@media (max-width: 1000px) {
+    
+.about-me img{
+        height: 200px;
+    
+
+}
+
+.about-me p {
+    
+    font-size: .7rem;
+    
+}
+
+
+}
+
+@media (max-width: 750px) {
+    
+.info{
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.about-me img{
+    height: auto;
+    width: 200px;
+    margin: 0;
+    margin-bottom: 50px;
+    
+
+}
+
+.about-me p {
+    
+margin: 0;
+width: 70%;
+
+}
+
+.soft i{
+    font-size: 100px;
+}
+
+
+
+
+}
+
+@media (max-width: 540px) {
+    
+
+
+.soft i{
+    font-size: 80px;
+}
+
+}
+
+@media (max-width: 420px) {
+    
+.about-me {
+    height: 1000px;
+    margin-top: 50px;
+}
+.soft{
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+.soft i{
+    font-size: 90px;
+}
+
+
+
+
+}
+/* Projects */
+
+@media (max-width: 990px) {
+.project-desc p {
+    
+    font-size: .7rem;
+    
+}
+
+.project-desc small{
+    font-size: .75rem;
+}
+
+
+.project-desc .links a {
+    
+
+    font-size: 1.5rem;
+    
+}
+.project-desc a {
+    font-size: .9rem;
+}
+
+}
+
+
+@media (max-width: 750px) {
+.project img{
+    display: none;
+}
+
+}
+
+
+@media (max-width: 650px) {
+.project.der{
+    transform: translateX(0);
+}
+.project.izq {
+    transform: translateX(0);
+}
+
+}
+
+/* Contact */
+
+@media (max-width: 1040px) {
+    .call2act .email-copy p {
+        font-size: .9rem;
+        margin-left: 1px;
+    }
+    .contact-box .call2act .email-copy button {
+        font-size: 1rem ;
+        
+    }
+
+    .contact-box .call2act p{
+        font-size: .8rem;
+    }
+
+}
+
+
+
+@media (max-width: 750px) {
+  
+    .contact-box {
+        flex-direction: column;
+        /* height: 550px; */
+    }
+
+    .contact-box form {
+        margin-top: 50px;
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 680px){
+ .contact-me .email-copy {
+     flex-direction: column;
+
+ }
+ .call2act .email-copy button {
+     display: none;
+    
+ }
+ .call2act .email-copy p{
+     width: 85%;
+ }
+ .contact-box .call2act{
+    width: 70%;
+}
+
+}
+
+@media (max-width: 520px){
+    .contact-box .call2act{
+        width: 70%;
+    }
+
+    .contact-box form {
+        
+        width: 80%;
+    }
+
+    
+}
+
+
+@media (max-width: 375px){
+
+    .contact-box .call2act h3{
+        
+        font-size: 20px;
+     
+    }
+    
+    .contact-box .call2act p{
+       font-size: 0.6;
+    }
+
+    .call2act .email-copy p{
+        font-size: .7rem;
+        width: 90%;
+    }
+    form input[type='submit']{
+        width: 35%;
+        
+     }
+   
+   
 }
