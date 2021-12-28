@@ -138,10 +138,10 @@
                     <p>hernan.pino7@gmail.com</p>
                 </div>
             </div>
-            <form action="">
-                <input type="text" placeholder="* Nombre" id="nombre">
-                <input type="email" placeholder="* Email" id="email">
-                <textarea name="msg" id="mensaje" cols="50" rows="10" placeholder="* Mensaje" style="resize: none;"></textarea>
+            <form action="form-handler.php" method="POST">
+                <input type="text" name="name" placeholder="* Nombre"  required>
+                <input type="email" name="email" placeholder="* Email"  required>
+                <textarea  name="message" cols="50" rows="10" placeholder="* Mensaje" style="resize: none;" required></textarea>
                 <input type="submit" class="enviar">
             </form>
         </div>
