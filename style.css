@@ -13,6 +13,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 body{
     background-color: var(--base-color);
@@ -55,12 +59,28 @@ ul li a{
     color: var(--title-color);
 }
 
+
+nav ul li::after{
+    content: '';
+    width: 0% ;
+    height: 2px;
+    background: var(--title-color);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    margin-top: 2px;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
 /* RRSS Bar */
 
 .rrss{
     position: fixed;
     left: 5%;
-    bottom: 50px;
+    bottom: 80px;
     width: 120px;
     font-size: 25px;
 }
@@ -70,6 +90,9 @@ ul li a{
     margin-top: 20px;
 }
 
+.rrss li i:hover {
+    transform: scale(1.2);
+}
 
 /* MAIN TEXT */
 
@@ -115,6 +138,13 @@ ul li a{
     margin: 10px auto;
     display: block;
     cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--title-color);
+    color: var(--base-color);
+    
 }
 
 
@@ -168,6 +198,10 @@ ul li a{
     margin: auto 0;
     margin-right: 20px;
     color: var(--text-color);
+}
+
+.about-me p strong {
+    color: var(--title-color);
 }
 
 .soft {
@@ -224,8 +258,30 @@ ul li a{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
     justify-content: space-around;
+    transform: translateX(-400%);
+    transition: transform .4s ease-out;
     
 }
+
+
+.project:nth-of-type(even) {
+    transform: translateX(400%);
+}
+
+.project.der.show {
+    transform: translateX(25px);
+}
+
+.project.izq.show {
+    transform: translateX(-25px);
+}
+
+/* .project.der{
+    transform: translateX(25px);
+}
+.project.izq {
+    transform: translateX(-25px);
+} */
 
 
 
@@ -267,9 +323,18 @@ ul li a{
     font-size: 1.875rem;
     color: var(--title-color);
 }
+
+.project-desc .links a i:hover{
+    transform: scale(1.1);
+
+}
 .project-desc a {
     color: var(--title-color);
     margin-top: 10px;
+}
+
+.project-desc a:hover{
+    transform: scale(1.05);
 }
 
 .project img{
@@ -277,14 +342,16 @@ ul li a{
     height: 90%;
     margin: auto;
     margin-right: 10px;
+    opacity: 0.7;
+    cursor: pointer;
 }
 
-.project.der{
-    transform: translateX(25px);
+.project img:hover {
+    opacity: 1;
+    transition: .9s;
 }
-.project.izq {
-    transform: translateX(-25px);
-}
+
+
 
 .project.izq img{
     margin-left: 10px;
@@ -393,6 +460,49 @@ form textarea{
 form input[type='submit']{
    width: 30%;
    cursor: pointer;
+}
+
+form .enviar:hover {
+    background-color: var(--title-color);
+    color: var(--base-color);
+}
+
+/* Footer */
+
+footer {
+    height: 2rem;
+    text-align: center;
+    color: #97d8c43c;
+    font-size: .9rem;
+    margin-top: 5rem;
+    margin-bottom: .5rem;
+}
+
+
+/* Arrow up */
+
+.scrollup {
+    position: fixed;
+    bottom: -120px;
+    background-color: var(--border);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+   
+}
+
+.scrollup__icon {
+    color: var(--base-color);
+    font-size: 1.2rem;
+}
+
+/* Show scroll */
+.show-scroll {
+    bottom: 80px;
+    right: 2%;
 }
 
 /* =====
