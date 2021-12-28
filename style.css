@@ -484,13 +484,15 @@ footer {
 
 .scrollup {
     position: fixed;
-    bottom: -120px;
+    bottom: 80px;
+    right: 2%;
     background-color: var(--border);
     padding: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transform: translateY(200px) ;
     transition: all .9s;
    
 }
@@ -502,8 +504,8 @@ footer {
 
 /* Show scroll */
 .show-scroll {
-    bottom: 80px;
-    right: 2%;
+    /* bottom: 80px; */
+    transform: translateY(0);
 }
 
 /* =====
@@ -714,7 +716,7 @@ width: 70%;
     .scrollup {
        
         padding: .4rem;
-        
+        right: 2.7%;
        
     }
     
@@ -723,10 +725,6 @@ width: 70%;
         font-size: 1rem;
     }
     
-    .show-scroll {
-        
-        right: 2.7%;
-    }
 }
 
 /* Contact */

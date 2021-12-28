@@ -16,9 +16,9 @@
 
     $to = 'hernan.pino76@gmail.com';
 
-    $headers = "De : $email_from \r\n ";
+    $headers = "De : $email_from \r\n "."Reply-to: $visitor_email \r\n";
 
-    $headers .= "Responder a: $visitor_email \r\n";
+    // $headers .= "Reply-to: $visitor_email \r\n";
 
     mail($to,$email_subjet,$email_body,$headers);
 
