@@ -27,6 +27,7 @@ body{
     justify-content: center;
     width: 90%;
     margin: 0 auto;
+    overflow-x: hidden;
     
 }
 
@@ -490,7 +491,7 @@ footer {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    
+    transition: all .9s;
    
 }
 
@@ -687,11 +688,6 @@ width: 70%;
 .project img{
     display: none;
 }
-
-}
-
-
-@media (max-width: 650px) {
 .project.der{
     transform: translateX(0);
 }
@@ -699,6 +695,38 @@ width: 70%;
     transform: translateX(0);
 }
 
+
+}
+
+
+@media (max-width: 650px) {
+ .projects {
+     margin-top: 100px;
+ }
+}
+
+@media (max-width: 400px) {
+    .projects {
+        margin-top: 200px;
+    }
+
+    /* scroll up */
+    .scrollup {
+       
+        padding: .4rem;
+        
+       
+    }
+    
+    .scrollup__icon {
+       
+        font-size: 1rem;
+    }
+    
+    .show-scroll {
+        
+        right: 2.7%;
+    }
 }
 
 /* Contact */
