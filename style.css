@@ -76,6 +76,17 @@ nav ul li:hover::after{
     width: 100%;
 }
 
+@media (max-width: 650px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul {
+        margin-top: 20px;
+    }
+}
+
 /* RRSS Bar */
 
 .rrss{
@@ -131,7 +142,7 @@ nav ul li:hover::after{
 }
 
 .btn {
-    padding: 15px 40px; 
+    /* padding: 15px 40px;  */
     background-color: transparent;
     border: 3px solid var(--border);
     border-radius: 25px;
@@ -142,10 +153,21 @@ nav ul li:hover::after{
     font-weight: 600;
 }
 
+.btn a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 40px ;
+    color: var(--title-color);
+}
+
+.btn a:hover{
+    color: var(--base-color);
+}
+
 .btn:hover {
     background-color: var(--title-color);
     color: var(--base-color);
-    
+   
 }
 
 
@@ -410,14 +432,53 @@ nav ul li:hover::after{
 
 .contact-box .call2act .email-copy button {
     background-color: transparent;
+    position: relative;
     border: 2.5px solid var(--border);
     padding: 5px 10px;
     font-size: 1.56rem;
+    font-weight: lighter;
     border-radius: 10px;
     color: var(--border);
     margin-right: 10px;
     cursor: pointer;
 }
+
+.email-copy button:active{
+    transform: scale(0.9);
+}
+
+.email-copy button::before{
+    content: 'Copiado';
+    position: absolute;
+    top: 50px ;
+    left: -5px;
+    background: var(--border);
+    padding: 4px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--base-color);
+    display: none;
+}
+
+.email-copy button::after {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 17px;
+    width: 10px;
+    height: 10px ;
+    background: var(--border);
+    transform: rotate(45deg);
+    display: none;
+}
+
+.email-copy button:active::before,
+.email-copy button:active::after{
+    display: block;
+}
+
+
 
 .call2act .email-copy p {
     border: 2.5px solid var(--border);
@@ -709,7 +770,7 @@ width: 70%;
 
 @media (max-width: 400px) {
     .projects {
-        margin-top: 200px;
+        margin-top: 300px;
     }
 
     /* scroll up */
@@ -738,6 +799,28 @@ width: 70%;
         font-size: 1rem ;
         
     }
+
+    .email-copy button::before{
+        content: 'Copiado';
+        position: absolute;
+        top: 50px ;
+        left: -5px;
+        background: var(--border);
+        padding: 3px;
+        border-radius: 20px;
+        font-size: 13px;
+        color: var(--base-color);
+    }
+    .email-copy button::before {
+        top: 45px ;
+        left: -7px;
+    }
+    
+    .email-copy button::after {
+        top: 40px;
+        left: 15px;
+    }
+    
 
     .contact-box .call2act p{
         font-size: .8rem;
@@ -770,9 +853,48 @@ width: 70%;
      display: none;
     
  }
+
  .call2act .email-copy p{
      width: 85%;
+     position: relative;
  }
+
+
+
+ .email-copy  p::before{
+    content: 'Copiado';
+    position: absolute;
+    top: 45px ;
+    left: 115px;
+    background: var(--border);
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--base-color);
+    display: none;
+    transition: display 3s;
+}
+
+.email-copy p::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 137px;
+    width: 10px;
+    height: 10px ;
+    background: var(--border);
+    transform: rotate(45deg);
+    display: none;
+    transition: all 1s;
+}
+
+.email-copy p:active::after,
+.email-copy p:active::before{
+    display: block;
+    transition: display 3s;
+}
+
  .contact-box .call2act{
     width: 70%;
 }

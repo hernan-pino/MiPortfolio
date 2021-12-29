@@ -1,8 +1,50 @@
 const projects = document.querySelectorAll('.project')
 
+// pa copiar mi correo - clipboar
+const emailBtn = document.getElementById('email-copy')
+const correo = document.getElementById('mi-correo')
+
 window.addEventListener('scroll', checkProject)
 
 
+// copy email code
+
+function copyEmail(){
+    if(window.innerWidth > 680 ) {
+        emailBtn.addEventListener('click', () => {
+    
+            copyText(correo)
+            
+        })
+    } else {
+        correo.addEventListener('click', () => {
+            copyText(correo)
+        })
+    }
+}
+
+copyEmail()
+
+function copyText(htmlEl){
+    if(!htmlEl) {
+        return
+    }
+
+    let elText = htmlEl.innerText
+    let inpputEl = document.createElement('input')
+    inpputEl.setAttribute('value', elText)
+    document.body.appendChild(inpputEl)
+
+    inpputEl.select()
+
+    document.execCommand('copy')
+
+    inpputEl.parentNode.removeChild()
+
+}
+
+
+// priject in
 function checkProject(){
     const trigger = window.innerHeight / 5 *4
 
@@ -19,6 +61,8 @@ function checkProject(){
     
  
 }
+
+// show scroll
  
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');

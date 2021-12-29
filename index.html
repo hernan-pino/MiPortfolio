@@ -13,12 +13,12 @@
     <header>
         <nav>
             <div class="logo">
-                logo
+                <img src="./img/Hernan_Pino__1_-removebg-preview.png" alt="">
             </div>
             <ul>
-                <li><a href="#">Sobre mí</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#about-me">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -32,7 +32,7 @@
     </div>
 
 
-    <div class="main">
+    <div class="main" >
         <div class="main-content">
             <h2>Hernan Pino</h2>
             <h1>Front End Developer</h1>
@@ -40,14 +40,14 @@
                 paginas funcionales, ocacionalmente realizo los diseños yo mismo.
                 Acualmente estoy aprendiendo nuevas tecnologias para ejercer como Full-stack Developer.
                 </p>
-            <button class="btn">Hablemos</button>
+            <button class="btn" ><a href="#contact"> Hablemos</a></button>
             <span>Disponible para trabajo freelance</span>
         </div>
       
     </div>
 
 
-    <div class="about-me">
+    <div class="about-me" id="about-me">
         <h2>Sobre mí</h2>
         <div class="info">
             <img src="./img/foto.jpg" alt="">
@@ -55,7 +55,7 @@
                 plasmar mis ideas y la de los demas, por lo que empecé a aprender por mi cuenta a través de tutoriales y cursos online <br> <br>
                 En un principio empeze usando <strong>Wordpress</strong> pero no me gusto lo poco flexible que puede ser por lo que investigue otras tecnologias, con esto empeze a familiarizarme con lo basico <strong>Html, Css y Js</strong> al igual 
                 que con herramientas de diseño como <strong>Adobe Xd</strong> <br> <br>
-                Ahora mismo estoy consolidando mis conocimiento con <strong>React</strong> y en un futuro aprender tecnologias para el Back-end como <strong>Django</strong>
+                Ahora mismo estoy consolidando mis conocimiento con <strong>React</strong> y en un futuro aprender tecnologias para el Back-end como <strong>Django</strong>, ya que <strong>Python</strong> fue el primer lenguaje de programacion que aprendí y es con el cual me siento mas comodo.
             </p>
         </div>
         <div class="soft">
@@ -67,7 +67,7 @@
     </div>
 
 
-    <div class="projects">
+    <div class="projects" id="projects">
         <h2>Proyectos</h2>
         <div class="project der">
             <div class="project-desc">
@@ -81,7 +81,7 @@
                     <a href="https://github.com/hernan-pino" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://pomofocus.io/app" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="#">Learn more</a>
+                <!-- <a href="#">Learn more</a> -->
                 
             </div>
             <img src="./img/1200px-Square_gray.svg.png" alt="">
@@ -99,7 +99,7 @@
                     <a href="https://github.com/hernan-pino" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://pomofocus.io/app" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="#">Learn more</a>
+                <!-- <a href="#">Learn more</a> -->
                 
             </div>
             
@@ -116,7 +116,7 @@
                     <a href="https://github.com/hernan-pino" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://pomofocus.io/app" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="#">Learn more</a>
+                <!-- <a href="#">Learn more</a> -->
                 
             </div>
             <img src="./img/1200px-Square_gray.svg.png" alt="">
@@ -127,15 +127,15 @@
     </div>
 
 
-    <div class="contact-me">
+    <div class="contact-me" id="contact">
         <h2>Contacto</h2>
         <div class="contact-box">
             <div class="call2act">
                 <h3>Interesado ? <br> Pongamonos en contacto !</h3>
                 <p>Puedes enviarme un correo o simplemente llenar el formulario :)</p>
                 <div class="email-copy">
-                    <button><i class="far fa-envelope"></i></button>
-                    <p>hernan.pino7@gmail.com</p>
+                    <button id="email-copy"><i class="far fa-copy"></i></button>
+                    <p id="mi-correo">hernan.pino7@gmail.com</p>
                 </div>
             </div>
             <form action="form-handler.php" method="POST">
